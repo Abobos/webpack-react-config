@@ -1,8 +1,10 @@
-# empty-project
+# Webpack config with react hot loader
 
-Empty project.
+Webpack puts all your modules plus the dependencies (like React) in one big file. This big file is called the "bundle". This makes your code much easier to maintain and it also gives you a quicker load speed with just one round trip. 
 
 ## Building and running on localhost
+
+* Clone this repo
 
 First install dependencies:
 
@@ -25,7 +27,7 @@ npm run build-dev
 ## Running
 
 ```sh
-node dist/bundle.js
+npm run start-dev
 ```
 
 ## Credits

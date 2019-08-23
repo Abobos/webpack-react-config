@@ -1,10 +1,12 @@
-import "./styles.css";
-import styles from "./styles.module.css";
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+import './styles.css'
 
-document.body.innerHTML = `<h1 class="${styles.talk}">WEBPACK in progress</h1>`;
+class App extends Component {
+  render() {
+    return <h1>Hello {this.props.name}</h1>
+  }
+}
 
-const hello = () => {
-  console.log("well");
-};
-
-hello();
+const mountNode = document.getElementById('app');
+render(<App name="Blessing"/>, mountNode);

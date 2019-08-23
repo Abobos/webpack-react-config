@@ -12,7 +12,7 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.(js)$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: "babel-loader"
       },
@@ -33,15 +33,24 @@ const config = {
         exclude: /\.module\.css$/
       },
       {
-        test: /(\.png$|\.jpg$|\.jpeg$)/,
+        test: /\.(png|jpg|jpeg)$/,
         use: "file-loader"
       }
+    ]
+  },
+  resolve: {
+    extensions: [
+      '.js',
+      '.jsx'
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({ template: "./src/index.html" }),
     new MiniCssExtractPlugin()
-  ]
+  ],
+  devServer: {
+    contentBase: './dist'
+  }
 };
 
 module.exports = config;
